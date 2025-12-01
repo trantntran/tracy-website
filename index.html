@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Tracy Tran | Business Intelligence Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Business Intelligence Manager with 10+ years of experience in data-driven decision making across Asset Management, FMCG, Retail, IT and MarTech." />
+  <style>
+    :root {
+      --bg: #f5f5f7;
+      --card-bg: #ffffff;
+      --accent: #1f6feb;
+      --text-main: #161616;
+      --text-muted: #555;
+      --border: #e0e0e0;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text-main);
+      padding: 24px;
+    }
+
+    .page {
+      max-width: 960px;
+      margin: 0 auto;
+      background: var(--card-bg);
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+      padding: 32px 28px 36px;
+    }
+
+    header {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+      border-bottom: 1px solid var(--border);
+      padding-bottom: 20px;
+      margin-bottom: 24px;
+    }
+
+    .avatar {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: #ddd;
+      object-fit: cover;
+    }
+
+    .no-photo {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, #e0e0e0, #c7c7c7);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 600;
+      color: #555;
+    }
+
+    .header-main {
+      flex: 1;
+      min-width: 220px;
+    }
+
+    h1 {
+      font-size: 1.8rem;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .title {
+      font-size: 1rem;
+      color: var(--accent);
+      font-weight: 600;
+      margin-top: 4px;
+      text-transform: uppercase;
+    }
+
+    .contact {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+      line-height: 1.4;
+    }
+
+    .contact a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    .contact a:hover {
+      text-decoration: underline;
+    }
+
+    main {
+      display: grid;
+      grid-template-columns: minmax(0, 2fr) minmax(0, 1.1fr);
+      gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+      main {
+        grid-template-columns: 1fr;
+      }
+      body {
+        padding: 16px;
+      }
+      .page {
+        padding: 20px 18px 26px;
+      }
+    }
+
+    section {
+      margin-bottom: 18px;
+    }
+
+    .section-title {
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text-muted);
+      margin-bottom: 8px;
+    }
+
+    .summary {
+      font-size: 0.95rem;
+      line-height: 1.5;
+      color: var(--text-main);
+    }
+
+    .experience-item {
+      margin-bottom: 14px;
+    }
+
+    .experience-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      font-size: 0.95rem;
+      font-weight: 600;
+    }
+
+    .experience-company {
+      color: var(--text-main);
+    }
+
+    .experience-role {
+      color: var(--accent);
+      font-weight: 600;
+    }
+
+    .experience-date {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      white-space: nowrap;
+    }
+
+    .experience-location {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 2px;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 6px;
+      padding-left: 0;
+    }
+
+    li {
+      position: relative;
+      padding-left: 16px;
+      margin-bottom: 4px;
+      font-size: 0.9rem;
+      line-height: 1.4;
+    }
+
+    li::before {
+      content: "•";
+      position: absolute;
+      left: 0;
+      top: 0;
+      color: var(--accent);
+    }
+
+    .pill-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+      margin-top: 4px;
+    }
+
+    .pill {
+      font-size: 0.8rem;
+      padding: 4px 8px;
+      border-radius: 999px;
+      border: 1px solid var(--border);
+      background: #fafafa;
+      white-space: nowrap;
+    }
+
+    .edu-item, .cert-item {
+      font-size: 0.9rem;
+      margin-bottom: 6px;
+    }
+
+    .edu-title, .cert-title {
+      font-weight: 600;
+    }
+
+    .edu-meta, .cert-meta {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+    }
+
+    .subtle {
+      color: var(--text-muted);
+      font-size: 0.8rem;
+      margin-top: 2px;
+    }
+
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header>
+      <!-- If you have a photo, replace the div below with:
+      <img src="tracy-profile.jpg" alt="Photo of Tracy Tran" class="avatar" />
+      and upload tracy-profile.jpg into the repo. -->
+      <div class="no-photo">TT</div>
+
+      <div class="header-main">
+        <h1>TRACY TRAN</h1>
+        <div class="title">Business Intelligence Manager</div>
+        <div class="contact">
+          District 4, Ho Chi Minh City · +84 903 138 303<br/>
+          <a href="mailto:ngoctran.thitran@gmail.com">ngoctran.thitran@gmail.com</a><br/>
+          <a href="https://linkedin.com/in/trantntran" target="_blank">linkedin.com/in/trantntran</a> ·
+          <a href="https://github.com/trantntran" target="_blank">github.com/trantntran</a>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- LEFT COLUMN -->
+      <div>
+        <section>
+          <div class="section-title">Profile</div>
+          <p class="summary">
+            Business Intelligence Manager with 10+ years of experience delivering data-driven solutions across
+            Asset Management, FMCG, Retail, IT and MarTech. Proven track record of improving reporting efficiency,
+            strengthening data reliability, and driving business growth through analytics. Strong in stakeholder
+            management, cross-functional collaboration, and leading teams to turn complex data into actionable insights.
+          </p>
+        </section>
+
+        <section>
+          <div class="section-title">Experience</div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <div>
+                <div class="experience-company">Dragon Capital Vietnam</div>
+                <div class="experience-role">Business Intelligence Manager</div>
+              </div>
+              <div class="experience-date">2024 – Present</div>
+            </div>
+            <div class="experience-location">Ho Chi Minh City, Vietnam</div>
+            <ul>
+              <li>Built and automated investment, AUM, fund-flow and sales dashboards, reducing analysis time by <strong>30–50%</strong> across Investment, Risk and Distribution teams.</li>
+              <li>Standardized KPI and reporting frameworks, cutting manual reporting workload by <strong>40+ hours per month</strong> and improving decision-making speed.</li>
+              <li>Optimized data pipelines and models (Bloomberg, CRM, internal fund data), improving data refresh and processing performance by <strong>70%</strong>.</li>
+              <li>Established data governance rules that reduced data inconsistencies by <strong>40%</strong> for NAV, exposure and performance reporting.</li>
+              <li>Partnered with Portfolio Managers and Risk teams to identify portfolio anomalies, improving response time to market movements and operational risks.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <div>
+                <div class="experience-company">C2C Techhub</div>
+                <div class="experience-role">Business Intelligence Manager</div>
+              </div>
+              <div class="experience-date">2022 – 2024</div>
+            </div>
+            <div class="experience-location">Ho Chi Minh City, Vietnam</div>
+            <ul>
+              <li>Led a cross-functional team of 6 across Vietnam and Japan, delivering <strong>20+ end-to-end data projects</strong> on time.</li>
+              <li>Oversaw design and implementation of a GCP-based data warehouse, delivered on schedule and within budget.</li>
+              <li>Automated customer analytics and reporting, reducing manual effort by <strong>48 hours per month</strong> and improving sales performance by <strong>12%</strong>.</li>
+              <li>Designed an RFM-based loyalty program that increased sales growth by <strong>19%</strong>.</li>
+              <li>Improved user engagement by <strong>2×</strong> and reduced bounce rate by <strong>12%</strong> through funnel analysis and A/B testing.</li>
+            </ul>
+          </div>
+
+          <div class="experience-item">
+            <div class="experience-header">
+              <div>
+                <div class="experience-company">DKSH Vietnam</div>
+                <div class="experience-role">Senior Data Analyst</div>
+              </div>
+              <div class="experience-date">2020 – 2022</div>
+            </div>
+            <div class="experience-location">Ho Chi Minh City, Vietnam</div>
+            <ul>
+              <li>Developed national KPI reporting using SQL &amp; Power BI, saving <strong>90 hours</strong> of manual work per month.</li>
+              <li>Built an automated sales target allocation system, eliminating data entry errors and reducing headcount from 3 to 1.</li>
+              <li>Created 80/20 profitability analysis that led to a <strong>4%</strong> reduction in customer churn through proactive interventions.</li>
+              <li>Optimized database models and queries, increasing reporting speed by <strong>90%</strong>.</li>
+            </ul>
+          </div>
+
+        </section>
+      </div>
+
+      <!-- RIGHT COLUMN -->
+      <div>
+
+        <section>
+          <div class="section-title">Key Skills</div>
+          <div class="pill-list">
+            <div class="pill">Business Intelligence</div>
+            <div class="pill">Data Strategy</div>
+            <div class="pill">SQL</div>
+            <div class="pill">Power BI</div>
+            <div class="pill">Python</div>
+            <div class="pill">DAX</div>
+            <div class="pill">Data Modelling</div>
+            <div class="pill">Dashboard Design</div>
+            <div class="pill">GCP</div>
+            <div class="pill">Tableau</div>
+            <div class="pill">A/B Testing</div>
+            <div class="pill">Stakeholder Management</div>
+            <div class="pill">Team Leadership</div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-title">Education</div>
+          <div class="edu-item">
+            <div class="edu-title">B.S., Posts &amp; Telecommunication Institute of Technology</div>
+            <div class="edu-meta">Graduated 2014</div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-title">Certifications</div>
+          <div class="cert-item">
+            <div class="cert-title">Google Project Management Certificate</div>
+            <div class="cert-meta">2021</div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-title">Microsoft Certified Data Analyst Associate (DA-100)</div>
+            <div class="cert-meta">2020</div>
+          </div>
+          <div class="cert-item">
+            <div class="cert-title">Google TensorFlow Developer Certificate</div>
+            <div class="cert-meta">2020</div>
+          </div>
+        </section>
+
+        <section>
+          <div class="section-title">Languages</div>
+          <div class="edu-item">
+            Vietnamese – Native<br/>
+            English – Advanced (IELTS 7.5)
+          </div>
+        </section>
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>
